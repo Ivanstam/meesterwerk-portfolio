@@ -1,9 +1,20 @@
 <script setup>
-  import {computed} from "vue";
+import {computed, onMounted, ref} from "vue";
   import store from "../store/index.js";
+  import axiosClient from "../axiosClient.js";
 
-  const artworks = computed(() => store.state.artwork)
+  const key = '0QSmn1vm';
+  // const artworks = computed(() => store.state.artwork)
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const artworks = ref([]);
+
+  onMounted(async () => {
+    const response = await axiosClient.get(`/collection?key=` + key + `&involvedMaker=Rembrandt+van+Rijn`);
+    artworks.value = response.data;
+    console.log(response.data)
+    // artObjectsArray.forEach(element => console.log(element));
+  });
+
 </script>
 
 <template>
@@ -14,6 +25,7 @@
         {{ letter }}
       </router-link>
     </div>
+    <pre>{{ artworks }}</pre>
   </div>
 </template>
 
