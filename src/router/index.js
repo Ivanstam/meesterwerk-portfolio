@@ -5,6 +5,7 @@ import SearchByLetter from "../views/SearchByLetter.vue";
 import SearchByCentury from "../views/SearchByCentury.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import GuestLayout from "../components/GuestLayout.vue";
+import ArtworkInfo from "../views/ArtworkInfo.vue";
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
                 path: '/by-letter/:letter?',
                 name: 'byLetter',
                 component: SearchByLetter
+            },
+            {
+                path: 'artwork/:id?',
+                name: 'artworkInfo',
+                component: ArtworkInfo
             }
         ]
     },

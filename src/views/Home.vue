@@ -1,6 +1,5 @@
 <script setup>
 import {computed, onMounted, ref} from "vue";
-  import store from "../store/index.js";
   import axiosClient from "../axiosClient.js";
 
   const key = '0QSmn1vm';
