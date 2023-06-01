@@ -5,7 +5,7 @@
 <template>
   <div class="bg-gray-500">
     <navbar/>
-    <main class="text-gray-200">
+    <main class="text-gray-200 flex flex-col p-8">
       <router-view/>
     </main>
   </div>

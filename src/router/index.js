@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from "../views/Home.vue";
-import SearchByArtist from "../views/SearchByArtist.vue";
 import SearchByLetter from "../views/SearchByLetter.vue";
 import SearchByCentury from "../views/SearchByCentury.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import GuestLayout from "../components/GuestLayout.vue";
 import ArtworkInfo from "../views/ArtworkInfo.vue";
+import SearchArtworks from "../views/SearchArtworks.vue";
 
 const routes = [
     {
@@ -18,9 +18,9 @@ const routes = [
                 component: Home
             },
             {
-                path: '/by-artist/:artist?',
-                name: 'byArtist',
-                component: SearchByArtist
+                path: '/search/:artist?',
+                name: 'searchArtworks',
+                component: SearchArtworks
             },
             {
                 path: '/by-century/:century?',
