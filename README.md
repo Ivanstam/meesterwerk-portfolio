@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# Meesterwerk-portfolio
+### Made with love by [Ivanstam](https://github.com/Ivanstam)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+*Practice project made with the intention of getting into Vue.js, VueX and Tailwind.*
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+An art portfolio using reactive data, a few views/routes using shared data with also some distinct sources for examples.  
+Currently using the [Rijksmuseum](https://www.rijksmuseum.nl/api/nl/) object metadata APIs (Collection & Details).  
+In order to use the application API fetches, create(or fill) a root .env file and add the following lines:  
+```
+VITE_API_BASE_URL="https://www.rijksmuseum.nl/api/nl/",
+VITE_API_SECRET_KEY="your secret key here"
+```
+A secret key can be recieved for free by making an account, see the API page for details

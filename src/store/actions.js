@@ -1,6 +1,6 @@
 import axiosClient from "../axiosClient.js";
 
-const key = '0QSmn1vm';
+const key = import.meta.env.VITE_API_SECRET_KEY;
 
 // Fetch the latest 20 artworks with pictures using the artist name and pass to the mutation
 export function searchArtworks({ commit }, artist) {
