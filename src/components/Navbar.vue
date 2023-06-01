@@ -13,9 +13,9 @@
                    class="inline-flex items-center h-full transition-colors hover:bg-gray-800 px-2 text-gray-200">
         Search artworks
       </router-link>
-      <router-link :to="{name: 'byLetter'}"
+      <router-link :to="{name: 'byMaterial'}"
                    class="inline-flex items-center h-full transition-colors hover:bg-gray-800 px-2 text-gray-200">
-        Search by letter
+        Search by material
       </router-link>
       <router-link :to="{name: 'byCentury'}"
                    class="inline-flex items-center h-full transition-colors hover:bg-gray-800 px-2 text-gray-200">

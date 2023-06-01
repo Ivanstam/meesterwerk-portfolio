@@ -8,11 +8,11 @@
   const artist = 'Rembrandt';
   const artworks = computed(() => store.state.searchedArtworks)
 
-  function searchByArtist() {
-    store.dispatch('searchByArtist', artist)
+  function searchArtworks() {
+    store.dispatch('searchArtworks', artist)
   }
   onMounted(() => {
-    searchByArtist();
+    searchArtworks();
   });
 </script>
 

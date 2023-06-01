@@ -1,4 +1,6 @@
 export default {
     searchedArtworks: [],
-    artworkInfo: {}
+    artworkInfo: {},
+    artworksByMaterial: [],
+    artworksByCentury: [],
 }

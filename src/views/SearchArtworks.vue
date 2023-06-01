@@ -6,25 +6,24 @@ import {useRoute} from "vue-router";
 import ArtworkCard from "../components/ArtworkCard.vue";
 
 const route = useRoute();
-const artist = ref('');
+const keyword = ref('');
 const artworks = computed(() => store.state.searchedArtworks)
-function searchByArtist() {
-  store.dispatch('searchByArtist', artist.value)
+function searchArtworks() {
+  store.dispatch('searchArtworks', keyword.value)
 }
 // Fetch the id from the params in the address field, only search if it returns a value
 onMounted(() => {
-  artist.value = route.params.artist
-  if (artist.value) {
-    searchByArtist();
+  keyword.value = route.params.keyword
+  if (keyword.value) {
+    searchArtworks();
   }
 });
 </script>
 
 <template>
-
-  <p class="text-2xl font-bold italic my-2">Search by letter</p>
-  <input v-model="artist" type="text" class="rounded border-1 border-gray-200 w-full text-gray-900"
-        placeholder="Search for artworks" @change="searchByArtist"/>
+  <p class="text-2xl font-bold italic my-2">Search artworks</p>
+  <input v-model="keyword" type="text" class="rounded border-1 border-gray-200 w-full text-gray-900"
+        placeholder="Search for artworks" @change="searchArtworks"/>
 
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
