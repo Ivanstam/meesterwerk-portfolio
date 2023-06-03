@@ -4,8 +4,8 @@ import axios from "axios";
 const key = import.meta.env.VITE_API_SECRET_KEY;
 
 // Fetch the latest 20 artworks with pictures using the artist name and pass to the mutation
-export function searchArtworks({ commit }, artist) {
-    axiosClient.get(`collection?key=${key}&q=${artist}&ps=20&imgonly=True&s=relevance`)
+export function searchArtworks({ commit }, [keyword, maxArtworks]) {
+    axiosClient.get(`collection?key=${key}&q=${keyword}&ps=${maxArtworks}&imgonly=True&s=relevance`)
         .then(({data}) => {
             console.log(data.artObjects );
             commit('setSearchedArtworks', data.artObjects);

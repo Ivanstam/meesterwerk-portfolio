@@ -9,8 +9,8 @@ const store = createStore({
     actions,
     mutations,
     getters: {
-        paginate (state) {
-            return state.searchedArtworks.slice(0,10)
+        paginate: (state) => (index, max) => {
+            return state.searchedArtworks.slice(index, max)
         }
     },
 })

@@ -28,7 +28,7 @@ onMounted(() => {
     <LinkButton v-for="century in centuries" :key="century" :text="century + 1 + 'e eeuw'"
                 @click="searchByCentury(century + 1)"/>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+  <div class="grid grid-cols-1 max-w-fit md:grid-cols-2 gap-3 mt-2">
     <ArtworkCard v-for="artwork in artworks" :key="artwork.objectNumber" :artwork="artwork"/>
   </div>
 </template>
