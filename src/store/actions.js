@@ -21,18 +21,18 @@ export function getArtworkInfo({ commit }, id) {
         });
 }
 
-export function searchByMaterial({ commit }, material) {
-    axiosClient.get(`collection?key=${key}&material=${material}&ps=20&imgonly=True&s=relevance`)
+export function searchByMaterial({ commit }, [material, maxArtworks]) {
+    axiosClient.get(`collection?key=${key}&material=${material}&ps=${maxArtworks}&imgonly=True&s=relevance`)
         .then(({data}) => {
             console.log(data.artObjects );
-            commit('setArtworksMaterial', data.artObjects);
+            commit('setSearchedArtworks', data.artObjects);
         });
 }
 
-export function searchByCentury({commit}, century) {
-    axiosClient.get(`collection?key=${key}&f.dating.period=${century}&ps=20&imgonly=True&s=relevance`)
+export function searchByCentury({commit}, [century, maxArtworks]) {
+    axiosClient.get(`collection?key=${key}&f.dating.period=${century}&ps=${maxArtworks}&imgonly=True&s=relevance`)
         .then(({data}) => {
             console.log(data.artObjects);
-            commit('setArtworksCentury', data.artObjects);
+            commit('setSearchedArtworks', data.artObjects);
         });
 }

@@ -1,5 +1,4 @@
 <script setup>
-
 import {computed, onMounted, ref} from "vue";
 import store from "../store/index.js";
 import {useRoute} from "vue-router";

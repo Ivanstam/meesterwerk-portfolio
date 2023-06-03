@@ -7,11 +7,13 @@ import LinkButton from "../components/LinkButton.vue";
 
 const route = useRoute();
 const centuryRef = ref();
-const artworks = computed(() => store.state.artworksByCentury)
+const currentIndex = ref(0);
+const paginatedArtworks = computed(() => store.getters.paginate(currentIndex.value, currentIndex.value + 10))
+const maxArtworks = 30;
 const centuries = [...Array(21).keys()]
-console.log(centuries);
+
 function searchByCentury(century) {
-  store.dispatch('searchByCentury', century)
+  store.dispatch('searchByCentury', [century, maxArtworks])
 }
 // Fetch the id from the params in the address field, only search if it returns a value
 onMounted(() => {
@@ -28,8 +30,12 @@ onMounted(() => {
     <LinkButton v-for="century in centuries" :key="century" :text="century + 1 + 'e eeuw'"
                 @click="searchByCentury(century + 1)"/>
   </div>
+  <div class="grid grid-cols-2 max-w-fit text-center">
+    <LinkButton text="Prev" v-if="currentIndex > 1" @click="currentIndex -= 10"/>
+    <LinkButton text="Next" v-if="currentIndex < maxArtworks - 10" @click="currentIndex += 10"/>
+  </div>
   <div class="grid grid-cols-1 max-w-fit md:grid-cols-2 gap-3 mt-2">
-    <ArtworkCard v-for="artwork in artworks" :key="artwork.objectNumber" :artwork="artwork"/>
+    <ArtworkCard v-for="artwork in paginatedArtworks" :key="artwork.objectNumber" :artwork="artwork"/>
   </div>
 </template>
 
