@@ -18,8 +18,9 @@ function searchByCentury(century) {
 // Fetch the id from the params in the address field, only search if it returns a value
 onMounted(() => {
   centuryRef.value = route.params.century
+  console.log(centuryRef.value)
   if (centuryRef.value) {
-    searchByCentury();
+    searchByCentury(centuryRef.value);
   }
 });
 </script>
