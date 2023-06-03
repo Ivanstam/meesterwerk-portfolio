@@ -8,7 +8,11 @@ const store = createStore({
     state,
     actions,
     mutations,
-    getters,
+    getters: {
+        paginate (state) {
+            return state.searchedArtworks.slice(0,10)
+        }
+    },
 })
 
 export default store;

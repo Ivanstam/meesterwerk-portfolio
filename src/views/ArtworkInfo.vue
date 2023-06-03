@@ -20,9 +20,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="artworkInfo.webImage">
+  <div v-if="artworkInfo.webImage" class="p-3 border-2 border-gray-400">
     <h1 class="text-xl font-bold mb-5">{{ artworkInfo.title }}</h1>
-    <img :src="artworkInfo.webImage.url" :alt="artworkInfo.title" class="p-8 mx-auto">
+    <img :src="artworkInfo.webImage.url" :alt="artworkInfo.title" class="m-5 mx-auto drop-shadow-2xl">
     <div class="italic m-3">
       {{ artworkInfo.label.description }}
       <div v-if="!artworkInfo.label.description">

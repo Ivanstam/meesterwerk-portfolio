@@ -1,4 +1,5 @@
 import axiosClient from "../axiosClient.js";
+import axios from "axios";
 
 const key = import.meta.env.VITE_API_SECRET_KEY;
 
@@ -25,6 +26,13 @@ export function searchByMaterial({ commit }, material) {
         .then(({data}) => {
             console.log(data.artObjects );
             commit('setArtworksMaterial', data.artObjects);
-        })
+        });
 }
 
+export function searchByCentury({commit}, century) {
+    axiosClient.get(`collection?key=${key}&f.dating.period=${century}&ps=20&imgonly=True&s=relevance`)
+        .then(({data}) => {
+            console.log(data.artObjects);
+            commit('setArtworksCentury', data.artObjects);
+        });
+}

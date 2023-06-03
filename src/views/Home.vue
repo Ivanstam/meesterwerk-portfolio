@@ -1,10 +1,8 @@
 <script setup>
   import {computed, onMounted, ref} from "vue";
-  import axiosClient from "../axiosClient.js";
   import ArtworkCard from "../components/ArtworkCard.vue";
   import store from "../store/index.js";
 
-  const key = '0QSmn1vm';
   const artist = 'Rembrandt';
   const artworks = computed(() => store.state.searchedArtworks)
 

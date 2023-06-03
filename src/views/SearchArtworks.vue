@@ -21,7 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <p class="text-2xl font-bold italic my-2">Search artworks</p>
+  <p class="text-2xl font-bold italic mb-2">Search artworks</p>
   <input v-model="keyword" type="text" class="rounded border-1 border-gray-200 w-full text-gray-900"
         placeholder="Search for artworks" @change="searchArtworks"/>
 

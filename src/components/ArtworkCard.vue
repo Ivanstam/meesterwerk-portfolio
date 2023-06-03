@@ -7,12 +7,12 @@ const { artwork } = defineProps(({
 </script>
 
 <template>
-  <div class="bg-gray-600 shadow-xl rounded-xl p-0.5">
+  <div class="bg-gradient-to-r from-gray-600 to-indigo-900 rounded-xl p-0.5 transition hover:drop-shadow-xl">
     <router-link :to="{ name: 'artworkInfo', params: { id: artwork.objectNumber }}">
       <img v-if="artwork.hasImage" :src="artwork.webImage.url" alt="artwork.title"
            class="w-full h-64 object-cover rounded-t-xl">
     </router-link>
-    <div class="p-3">
+    <div class="relative p-3">
       <h1 class="font-bold">{{ artwork.title }}</h1>
       <p class="mb-4">{{ artwork.longTitle }}</p>
       <div class="flex items-center justify-between">

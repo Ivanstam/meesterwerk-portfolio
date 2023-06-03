@@ -20,9 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <p class="text-2xl font-bold italic my-2">Search by material</p>
-  </div>
+  <p class="text-2xl font-bold italic mb-2">Search by material</p>
   <input v-model="material" type="text" class="rounded border-1 border-gray-200 w-full text-gray-900"
          placeholder="Search for artworks (eg: Brons, Verf etc.)" @change="searchByMaterial"/>
 
