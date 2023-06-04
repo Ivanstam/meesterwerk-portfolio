@@ -9,7 +9,7 @@ const route = useRoute();
 const keyword = ref('');
 const currentIndex = ref(0);
 const paginatedArtworks = computed(() => store.getters.paginate(currentIndex.value, currentIndex.value + 10))
-const maxArtworks = 30;
+const maxArtworks = 50;
 function searchArtworks() {
   store.dispatch('searchArtworks', [keyword.value, maxArtworks])
 }
@@ -26,7 +26,7 @@ onMounted(() => {
   <p class="text-2xl font-bold italic mb-2">Search artworks</p>
   <input v-model="keyword" type="text" class="rounded border-1 border-gray-200 w-full text-gray-900"
         placeholder="Search for artworks" @change="searchArtworks"/>
-  <div class="grid grid-cols-2 max-w-fit text-center">
+  <div class="grid grid-cols-2 max-w-fit text-center gap-1">
     <LinkButton text="Prev" v-if="currentIndex > 1" @click="currentIndex -= 10"/>
     <LinkButton text="Next" v-if="currentIndex < maxArtworks - 10" @click="currentIndex += 10"/>
   </div>

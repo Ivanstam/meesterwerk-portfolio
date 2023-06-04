@@ -7,7 +7,7 @@ const { artwork } = defineProps(({
 </script>
 
 <template>
-  <div class="bg-gradient-to-r from-gray-600 to-indigo-900 rounded-xl p-0.5 transition hover:drop-shadow-xl">
+  <div class="bg-gradient-to-r from-gray-600 to-indigo-950 rounded-xl p-0.5 transition hover:drop-shadow-xl">
     <router-link :to="{ name: 'artworkInfo', params: { id: artwork.objectNumber }}">
       <img v-if="artwork.hasImage" :src="artwork.webImage.url" alt="artwork.title"
            class="w-full h-64 object-cover rounded-t-xl">

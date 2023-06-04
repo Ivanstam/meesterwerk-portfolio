@@ -22,15 +22,15 @@ onMounted(() => {
 
 <template>
   <div v-if="artworkInfo.webImage" class="p-3 border-2 border-gray-400">
-    <h1 class="text-xl font-bold mb-5">{{ artworkInfo.title }}</h1>
-    <img :src="artworkInfo.webImage.url" :alt="artworkInfo.title" class="m-5 mx-auto drop-shadow-2xl">
+    <h1 class="text-2xl font-bold text-center">{{ artworkInfo.title }}</h1>
+    <img :src="artworkInfo.webImage.url" :alt="artworkInfo.title" class="m-3 mx-auto drop-shadow-2xl">
     <div class="italic m-3">
       {{ artworkInfo.label.description }}
       <div v-if="!artworkInfo.label.description">
         {{ artworkInfo.longTitle }}
       </div>
     </div>
-
+    <hr class="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700">
     <div class="content-stretch grid grid-cols-1 md:grid-cols-3 mt-2 py-2">
       <div class="text-center"><h1 class="font-bold">Artiest:</h1>
         <router-link :to="{name: 'searchArtworks', params: {keyword: artworkInfo.principalMaker}}" class="text-blue-900">

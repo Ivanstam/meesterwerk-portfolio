@@ -9,7 +9,7 @@ const route = useRoute();
 const material = ref('');
 const currentIndex = ref(0);
 const paginatedArtworks = computed(() => store.getters.paginate(currentIndex.value, currentIndex.value + 10))
-const maxArtworks = 30;
+const maxArtworks = 50;
 function searchByMaterial() {
   store.dispatch('searchByMaterial', ['' + material.value.toLowerCase(), maxArtworks])
 }

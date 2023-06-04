@@ -1,14 +1,14 @@
 <script setup>
   import Navbar from "./Navbar.vue";
+  import Footer from "./Footer.vue";
 </script>
 
 <template>
-  <div class="bg-gray-500">
-    <navbar/>
-    <main class="text-gray-200 flex flex-col p-8">
-      <router-view/>
-    </main>
-  </div>
+  <navbar/>
+  <main class="text-gray-200 flex flex-col p-6">
+    <router-view/>
+  </main>
+  <Footer/>
 </template>
 
 <style scoped>

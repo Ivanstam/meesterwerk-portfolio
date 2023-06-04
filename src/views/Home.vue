@@ -7,7 +7,7 @@
   const keyword = 'Rembrandt';
   const paginatedArtworks = computed(() => store.getters.paginate(0, 10))
   function searchArtworks() {
-    store.dispatch('searchArtworks', [keyword, 30])
+    store.dispatch('searchArtworks', [keyword, 50])
   }
   onMounted(() => {
     searchArtworks();

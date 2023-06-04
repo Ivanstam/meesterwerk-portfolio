@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <header class="bg-gray-700 shadow h-16 flex justify-between items-stretch">
+  <header class="bg-gradient-to-b from-gray-700 to-gray-800 shadow h-16 flex justify-between items-stretch">
     <router-link :to="{name: 'home'}"
                  class="inline-flex items-center h-full px-5 transition-colors hover:bg-gray-800 text-gray-200">
       Home

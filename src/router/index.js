@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from "../views/Home.vue";
 import SearchByCentury from "../views/SearchByCentury.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
-import GuestLayout from "../components/GuestLayout.vue";
 import ArtworkInfo from "../views/ArtworkInfo.vue";
 import SearchArtworks from "../views/SearchArtworks.vue";
 import SearchByMaterial from "../views/SearchByMaterial.vue";
@@ -38,10 +37,6 @@ const routes = [
                 component: ArtworkInfo
             }
         ]
-    },
-    {
-        path: '/guest',
-        component: GuestLayout
     }
 ]
 
