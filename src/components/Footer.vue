@@ -10,7 +10,7 @@
     <div class="flex items-center gap-1">
       <a href="https://github.com/Ivanstam" target="_blank"
          class="inline-flex items-center h-full transition-colors hover:bg-gray-800 px-2 text-gray-200">
-        <img src="https://img.icons8.com/?size=512&id=62856&format=png" class="h-10 m-1">
+        <img src="https://img.icons8.com/?size=512&id=62856&format=png" alt="Github" class="h-10 m-1">
         Made with love by Ivanstam
       </a>
     </div>

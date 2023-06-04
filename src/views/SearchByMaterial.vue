@@ -31,7 +31,7 @@ onMounted(() => {
     <LinkButton text="Next" v-if="currentIndex < maxArtworks - 10" @click="currentIndex += 10"/>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 mt-2">
     <ArtworkCard v-for="artwork in paginatedArtworks" :key="artwork.objectNumber" :artwork="artwork"/>
   </div>
 

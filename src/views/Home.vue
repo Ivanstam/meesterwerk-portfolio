@@ -17,7 +17,7 @@
 <template>
   <p class="text-3xl font-bold italic">Meesterwerk portfolio</p>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 mt-4">
     <ArtworkCard v-for="artwork in paginatedArtworks" :artwork="artwork"/>
   </div>
 </template>
